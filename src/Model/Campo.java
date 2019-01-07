@@ -19,25 +19,44 @@ public class Campo {
 	//Metodi SET
 		
 	//Metodi GET
+	/**
+	 * Metodo che ritorna il numero delle navi
+	 * @return Numero delle navi
+	 */
 	public int getNumeroNavi() {
 		return numeroNavi;
 	}
 	
+	/**
+	 * Metodo che ritorna la cella del campo dell'utente
+	 * @param posizione Posizione della cella
+	 * @return Cella del campo da gioco
+	 */
 	public Cella getCella(int posizione) {
 		return cella[posizione];
 	}
 	
+	/**
+	 * Metodo che ritorna il numero delle celle del campo
+	 * @return Numero di celle del campo da gioco
+	 */
 	public int getNumeroCelle() {
 		return numeroCelle;
 	}
 	
 	//Metodi di logica
+	/**
+	 * Metodo che imposta, per tutte le celle, il mare (solitamente in fase di inizializzazione iniziale del gioco)
+	 */
 	public void impostaTuttoMare() {
 		for(int i=0; i<numeroCelle; i++) {
 			cella[i] = new Cella(false);
 		}
 	}
 	
+	/**
+	 * Metodo che imposta, in modo casuale, le navi sul campo da gioco
+	 */
 	public void posizionamentoNavi() {
 		int posizioneCasuale;
 		for(int i=0; i<numeroNavi; i++) {
@@ -55,6 +74,10 @@ public class Campo {
 		}		
 	}
 	
+	/**
+	 * Metodo che calcola il numero di navi ancora presenti sul campo da gioco
+	 * @return Numero di navi rimanenti del campo da gioco
+	 */
 	public int calcolaNumeroNaviRimanenti() {
 		naviRimanenti = 0;
 		for(int i=0; i<numeroCelle; i++) {
@@ -65,6 +88,9 @@ public class Campo {
 		return naviRimanenti;
 	}
 	
+	/**
+	 * Metodo che crea il campo da gioco
+	 */
 	public void costruzioneCampo() {
 		cella = new Cella[numeroCelle];
 		//Prima metto tutto mare...
@@ -74,6 +100,9 @@ public class Campo {
 	}
 	
 	//Costruttore
+	/**
+	 * Costruttore di Campo
+	 */
 	public Campo() {
 		this.costruzioneCampo();
 		this.calcolaNumeroNaviRimanenti();

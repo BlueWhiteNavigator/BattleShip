@@ -7,8 +7,7 @@ package Model;
 public class Giocatore {
 	
 	//Proprietà della classe
-	private final String NOME_DEFAULT = "";
-	
+	private final String NOME_DEFAULT = "";	
 	private String nome;
 	private Campo campo;
 	
@@ -21,6 +20,9 @@ public class Giocatore {
 		this.nome = nome;
 	}
 	
+	/**
+	 * Metodo che crea il campo da gioco
+	 */
 	public void setCampo() {
 		campo = new Campo();
 	}
@@ -28,12 +30,16 @@ public class Giocatore {
 	//Metodi GET
 	/**
 	 * Metodo che ritorna il nome del giocatore
-	 * @return
+	 * @return Nome del giocatore
 	 */
 	public String getNome() {
 		return this.nome;
 	}
 	
+	/**
+	 * Metodo che ritorna il campo del giocatore
+	 * @return Campo del giocatore
+	 */
 	public Campo getCampo() {
 		return this.campo;
 	}
