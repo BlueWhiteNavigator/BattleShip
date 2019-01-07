@@ -7,7 +7,7 @@ import View.*;
 
 /**
  * Classe che descrive la logica del gioco
- * @author Davide
+ * @author Davide 
  */
 public class Gioco {
 	
