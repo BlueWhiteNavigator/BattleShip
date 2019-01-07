@@ -27,5 +27,4 @@ public class Shell {
 		tastiera = new BufferedReader(flusso);
 	}
 
-	
 }
